@@ -76,9 +76,28 @@ StdJa.document (|
     }
   >
 % 以降の部分を物理好き君が作成する。
+% TODO:仕上がった段階で git commitする
   +section{解答・解説}<
     +p{
-       
+      1.1(1)
+      \eqn(${
+        m \frac{dv}{dt} = mg + kv
+      });%
+      (2)
+      \eqn(${
+        \int \frac{m}{mg+kv} dv = -\int dt
+      });%
+      (3)
+      \eqn(${
+        \int \frac{m}{mg+kv} dv = -\int dt
+      });%
+      をシミュレート
+    }
+    +p{
+      1.2(1)
+      \eqn(${
+        m \frac{dv}{dt} = mg+psv^2
+      });%
     }
   >
 >
