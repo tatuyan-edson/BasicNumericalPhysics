@@ -6,19 +6,23 @@
 #define h 0.00001//微小時間(s)
 
 double dist(double wei,double rad,double fsp,double theta){
+  int i=0;
   double xa=0,ya=0;//(x,y)座標
   double xv,yv;//(x,y)速度
+  double tv;//座標上速度
   double s=rad*rad*pi;//断面積(m^2)
-  double xf,yf;
   xv=cos(theta)*fsp;//x初速(m/s)
   yv=sin(theta)*fsp;//y初速(m/s)
   while(ya>=0){
     xa+=xv*h;//x座標の変動(m)
     ya+=yv*h;//y座標の変動(m)
-    if(xv>=0){xf=1.0;}else{xf=-1.0;}
-    if(yv>=0){yf=1.0;}else{yf=-1.0;}
-    xv-=(((rho*s*xv*xv*xf)*h)/wei);//x速度の変動(m/s)
-    yv-=(((rho*s*yv*yv*yf+wei*g)*h)/wei);//y速度の変動(m/s)
+    tv=sqrt(xv*xv+yv*yv);
+    xv-=(((rho*s*tv*tv*(xv/tv))*h)/wei);//x速度の変動(m/s)
+    yv-=((((rho*s*tv*tv*(yv/tv))+wei*g)*h)/wei);//y速度の変動(m/s)
+    i++;
+    //if(i%10000==0){
+    //  printf("%.12lf %.12lf\n",xa,ya);
+    //}
   }
   return xa;
 }
@@ -38,6 +42,8 @@ int main(){
   fsp/=3.6;//km/h -> m/s
   st=0;
   fi=pi/2.0;//直角
+  //dist(wei,rad,fsp,pi/4.0);
+  //return 0;
   for(i=0;i<100;i++){
     te1=(st*2.0+fi)/3.0;
     te2=(st+fi*2.0)/3.0;
