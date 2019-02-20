@@ -76,7 +76,6 @@ StdJa.document (|
     }
   >
 % 以降の部分を物理好き君が作成する。
-% TODO:仕上がった段階で git commitする
   +section{解答・解説}<
     +p{
       1.1(1)
@@ -91,13 +90,15 @@ StdJa.document (|
       \eqn(${
         \int \frac{m}{mg+kv} dv = -\int dt
       });%
-      をシミュレート
+      をシミュレート。プログラムはLec01-1.cを参照。
     }
     +p{
       1.2(1)
       \eqn(${
-        m \frac{dv}{dt} = mg+psv^2
+        m \frac{dv}{dt} = mg+ \rho Sv^2
       });%
+      (2)(3)
+      投射角${\theta}に対して飛距離${f\(\theta\)}とし、これが凸関数である前提で三分探索すれば、最良の投射角が求まる。
     }
   >
 >
