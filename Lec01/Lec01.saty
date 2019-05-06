@@ -2,8 +2,8 @@
 @require: itemize
 
 StdJa.document (|
-  title = {高校生向け計算物理入門 その1};
-  author = {出題：エドソン 達哉ん・解答：物理好き};
+  title = {入門者向け計算物理入門 その1};
+  author = {出題：エドソン 達哉ん};
   show-title = true;
   show-toc = false;
 |) '<
@@ -75,30 +75,11 @@ StdJa.document (|
        また、このように近似を用いて微分方程式の通る(近似的)点列${\(x_i,y_i\)}を求めるのが数値的に微分方程式を解くということである。
     }
   >
-% 以降の部分を物理好き君が作成する。
+% 以降の部分を受講者が作成する。
   +section{解答・解説}<
     +p{
-      1.1(1)
-      \eqn(${
-        m \frac{dv}{dt} = mg + kv
-      });%
-      (2)
-      \eqn(${
-        \int \frac{m}{mg+kv} dv = -\int dt
-      });%
-      (3)
-      \eqn(${
-        \int \frac{m}{mg+kv} dv = -\int dt
-      });%
-      をシミュレート。プログラムはLec01-1.cを参照。
     }
     +p{
-      1.2(1)
-      \eqn(${
-        m \frac{dv}{dt} = mg+ \rho Sv^2
-      });%
-      (2)(3)
-      投射角${\theta}に対して飛距離${f\(\theta\)}とし、これが凸関数である前提で三分探索すれば、最良の投射角が求まる。
     }
   >
 >
