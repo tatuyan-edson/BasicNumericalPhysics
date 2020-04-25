@@ -1,8 +1,0 @@
-m dv/dt = mg - kv
-
-1/ mg-kv = m
--log(mg-kv) = k/m t
-
-mg-kv = exp(-k/m t)
-
-kv = mg - exp(-kt/m)

@@ -83,7 +83,7 @@ StdJa.document (|
       物体の質量を${m},重力加速度を${g},速度ベクトルを${v}とする。
       \eqn(${ m\frac{dv_x}{dt} = -kv_x });%
       \eqn(${ m\frac{dv_y}{dt} = -mg -kv_y});%
-      \eqn(${ v_x = e^{-\frac{k}{m}t}v_0cos\theta });%
+      \eqn(${ v_x = e^{-\frac{-k}{m}t}v_0cos\theta });%
       \eqn(${ v_y = v_0 sin \theta e^{-\frac{k}{m}t} + \frac{mg}{k} \( e^{-\frac{k}{m}t} - 1 \) });%
       \eqn(${ x \paren{t} = \frac{mg}{k}t + \frac{m}{k^2}e^{-\frac{k}{m}t} });%
       \eqn(${ x \paren{t} = -\frac{mg}{k}t + \frac{m}{k^2}e^{-\frac{k}{m}t} });%
