@@ -1,2 +1,2 @@
 # BasicNumericalPhysics
-高校生むけ計算物理トレーニング
+入門者むけ計算物理トレーニング

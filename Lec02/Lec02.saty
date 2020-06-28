@@ -2,8 +2,8 @@
 @require: itemize
 
 StdJa.document (|
-  title = {高校生向け計算物理入門 その2};
-  author = {出題：エドソン 達哉ん・解答：物理好き};
+  title = {入門者向け計算物理入門 その2};
+  author = {出題：エドソン 達哉ん};
   show-title = true;
   show-toc = false;
 |) '<
@@ -38,7 +38,7 @@ StdJa.document (|
       }
     >
   >
-% 以降の部分を物理好き君が作成する。
+% 以降の部分を受講者が作成する。
   +section{数値計算の補足}<
     +p{
        （今回は何種類か授業で扱うので、自分でノートとして書いてみてください）

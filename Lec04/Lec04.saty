@@ -89,7 +89,11 @@ StdJa.document (|
     >
   +section{解答・解説}<
     +p{
+<<<<<<< HEAD
 
+=======
+       
+>>>>>>> 632068758ccf0141ee712d844bf8bffdd7d47a81
     }
   >
 >
