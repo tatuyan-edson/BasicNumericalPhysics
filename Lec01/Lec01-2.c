@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include<math.h>
 #define pi 3.14
-#define rho 1.3//大気の密度(kg/m^3)
+#define rho 1.225//大気の密度(kg/m^3)
 #define g 9.81
 #define h 0.00001//微小時間(s)
 
@@ -13,7 +13,7 @@ double dist(double wei,double rad,double fsp,double theta){
   double s=rad*rad*pi;//断面積(m^2)
   xv=cos(theta)*fsp;//x初速(m/s)
   yv=sin(theta)*fsp;//y初速(m/s)
-  while(ya>=0){
+  while(ya>=0.0){
     xa+=xv*h;//x座標の変動(m)
     ya+=yv*h;//y座標の変動(m)
     tv=sqrt(xv*xv+yv*yv);
@@ -49,6 +49,7 @@ int main(){
     te2=(st+fi*2.0)/3.0;
     dis1=dist(wei,rad,fsp,te1);
     dis2=dist(wei,rad,fsp,te2);
+    printf("%.12lf %.12lf\n",dis1,dis2);
     if(dis1>dis2){fi=te2;}
     else{st=te1;}
     if(st>fi){break;}

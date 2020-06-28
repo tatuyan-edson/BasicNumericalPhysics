@@ -78,27 +78,48 @@ StdJa.document (|
 % 以降の部分を物理好き君が作成する。
   +section{解答・解説}<
     +p{
-      1.1(1)
-      \eqn(${
-        m \frac{dv}{dt} = mg + kv
-      });%
-      (2)
-      \eqn(${
-        \int \frac{m}{mg+kv} dv = -\int dt
-      });%
-      (3)
-      \eqn(${
-        \int \frac{m}{mg+kv} dv = -\int dt
-      });%
-      をシミュレート。プログラムはLec01-1.cを参照。
+      ${g}は重力加速度とする。
+      また、初速 ${v_0} 、角度 ${\theta} で投げ上げたものとする。
     }
-    +p{
-      1.2(1)
-      \eqn(${
-        m \frac{dv}{dt} = mg+ \rho Sv^2
-      });%
-      (2)(3)
-      投射角${\theta}に対して飛距離${f\(\theta\)}とし、これが凸関数である前提で三分探索すれば、最良の投射角が求まる。
-    }
+    +subsection{粘性抵抗力の場合}<
+      +enumerate{
+        *
+        \eqn(${
+          m \frac{d\bm{v}}{dt} = mg - k\bm{v}
+        });%
+        *
+        \eqn(${
+          \int_{v_0}^{v} \frac{m}{mg-k\bm{v}} dv = \int_{0}^{t} dt
+        });%
+        \eqn(${
+          \frac{m * log \(\frac{mg-kv}{mg-kv_0}\)}{k} = t
+        });%
+        \eqn(${
+          v = \frac{mg-\(mg-kv_0\)*e^{-\frac{kt}{m}}}{k} \(cf.t=0\)
+        });%
+        \eqn(${
+          v_x = \(v_0cos\(-\theta\)\)*e^{-\frac{kt}{m}}
+        });%
+        \eqn(${
+          v_y = -\(\frac{mg-\(mg-kv_0sin\(-\theta\)\)*e^{-\frac{kt}{m}}}{k}\)
+        });%
+        *
+        上式をシミュレート。プログラムはLec01-1.cを参照。
+        \eqn(${
+          v=5.0\(m/s\),m=1\(kg\),\theta=\(\pi/4\),g=9.81\(m/s^2\)
+        });%
+      }
+    >
+    +subsection{慣性抵抗力の場合}<
+      +enumerate{
+        *
+        \eqn(${
+          m \frac{d\bm{v}}{dt} = mg+ \rho Sv^2
+        });%
+        *
+        *
+        投射角${\theta}に対して飛距離${f\(\theta\)}とし、これが凸関数である前提で三分探索すれば、最良の投射角が求まる。
+      }
+    >
   >
 >

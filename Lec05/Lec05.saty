@@ -28,7 +28,7 @@ StdJa.document (|
 
     +section{Ekman Layer}<
       +p{の地衡風の話は、空気等による粘性が十分に小さく、地面近くでもなくてなおかつ鉛直方向も無視した話であった。今度は、これに渦粘性力が加わったケースを考える。
-         
+
       }
       +enumerate{
         * 渦粘性係数を${K}とするとき、渦粘性力は${K\frac{d^2 u}{dz^2}}により与えられる(本来は偏微分であるが、簡単のため常微分で同一視している。)。
@@ -39,7 +39,7 @@ StdJa.document (|
       }
     >
   >
-  
+
 % 以降の部分を受講者が作成する。
   +chapter{数値計算の補足}<
     +section{2階微分の近似方法}<
@@ -64,7 +64,7 @@ StdJa.document (|
          この連立方程式を解くことで数値解を得る。
       }
     >
-  
+
   +section{1次代数連立方程式の解法：直接法}<
   	+p{
   		1次代数連立方程式の解法として、直接法という方法が知られている。その中で、Gauss法とGauss-Jordan法を紹介する。
@@ -140,11 +140,20 @@ StdJa.document (|
   		}
         >
     >
-  >  
-  	
+  >
+
   +chapter{解答・解説}<
     +p{
-       
+      1.1
+      $質点のもつ速度ベクトル\vec{V}=(u,v)として$<br>
+      <br>
+      $\frac{ \partial p }{ \partial x } =vf$<br>
+      $\frac{ \partial p }{ \partial y }=-uf$<br>
+      $p(x,y)=(気圧)という形にして気圧を偏微分、これを任意に設定して解析的、数値的に解く$
+      $\frac{1}{f}\frac{ \partial p }{ \partial x } = v$<br>
+      $-\frac{1}{f}\frac{ \partial p }{ \partial y }=u$<br>
+      <br>
+      $$
     }
   >
 >
